@@ -41,15 +41,11 @@
         });
 
         // // 平行光源を作成
-        // const directionalLight = new THREE.DirectionalLight(0xffffff);
-        // directionalLight.position.set(1, 1, 1);
-        // scene.add(directionalLight);
-        // // 環境光を作成
-        // const ambientLight = new THREE.AmbientLight(0x999999);
-        // scene.add(ambientLight);
-        const directionalLight = new THREE.DirectionalLight(0xffffff);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
         directionalLight.position.set(1, 1, 1);
         scene.add(directionalLight);
+        const light = new THREE.AmbientLight(0xFFFFFF, 0.5);
+        scene.add(light);
 
         // // 球体を作成
         // const geometry1 = new THREE.SphereGeometry(150, 30, 30);
